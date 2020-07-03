@@ -1,0 +1,70 @@
+/*
+
+=== COLORES ===
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+
+=== TIPOGRAFÍAS ===
+Familia: 'Roboto'
+
+=== TAMAÑOS TIPOGRÁFICOS ===
+Párrafos en general: 12px
+Titulares (Basado en tu última visita / Ofertas): 24px
+Precios: 18px
+Descuentos: 16px
+Descripciones: 16px
+
+=== ÍCONOS ===
+El departamento de diseño usó los íconos de este sitio:
+https://fontawesome.com/icons?d=gallery&m=free
+Para ello nos pidió que carguemos una hoja de estilos del mismo con ésta porción de
+código, dijeron que vos sabes donde tiene que estar ubicada, sino que consultes con
+tus pares o compañer@s de mayor seniority.
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+*/
+
+/* estilos generales */
+
+body {font-family: 'Roboto';}
+
+main {background-color: #ebebeb;}
+
+/* article {background-color: white;} */
+article footer {background-color: white;}
+
+a {text-decoration: none;}
+a:visited {color: #666;}
+
+ul {list-style-type: none;}
+
+img {width: 100%;}
+
+/*  */
+
+header {background-color: #EAC926;}
+
+h3 {
+    margin-top: 0;
+    font-size: 24px;
+    background-color: #ebebeb;
+}
+
+p, h3 {color: #666;}
+
+p {
+    font-size: 12px;
+    /* margin-bottom: 0; */
+}
+
+p.precio {font-size: 18px;}
+
+p.descuento, p.descripcion {font: 16px;}
+
+p.descuento, .green {color: #39b54a;}
+
+.blue {color: #1259c3;}
