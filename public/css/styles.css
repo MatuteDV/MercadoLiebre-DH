@@ -27,18 +27,18 @@ tus pares o compañer@s de mayor seniority.
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
 */
+/* @face-font {font-family: url('');} */  /*  Terminar */ 
 
-/* estilos generales */
 
-body {font-family: 'Roboto';}
+/* ---------------- estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+}
 
-main {background-color: #ebebeb;}
-
-/* article {background-color: white;} */
 article footer {background-color: white;}
 
 a {text-decoration: none;}
-a:visited {color: #666;}
+a:visited {color: black;}
 
 ul {list-style-type: none;}
 
@@ -54,11 +54,10 @@ h3 {
     background-color: #ebebeb;
 }
 
-p, h3 {color: #666;}
+h3, h4 {color: #666;}
 
 p {
     font-size: 12px;
-    /* margin-bottom: 0; */
 }
 
 p.precio {font-size: 18px;}
@@ -68,3 +67,15 @@ p.descuento, p.descripcion {font: 16px;}
 p.descuento, .green {color: #39b54a;}
 
 .blue {color: #1259c3;}
+
+.password-container {
+    margin-top: 20px;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 20px;
+}
