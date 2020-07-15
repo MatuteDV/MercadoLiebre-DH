@@ -30,52 +30,163 @@ tus pares o compañer@s de mayor seniority.
 /* @face-font {font-family: url('');} */  /*  Terminar */ 
 
 
-/* ---------------- estilos generales */
-body {
-    font-family: 'Roboto', sans-serif;
-}
+/* ---------------- Estilos generales */
+    * {
+        margin: 0;                          /* Pedido */
+        padding: 0;                         /* Pedido */
+        box-sizing: border-box;             /* Pedido */
+    }
 
-article footer {background-color: white;}
+    body {
+        font-family: 'Roboto', sans-serif;  /* Pedido */
+        background-color: #ebebeb;          /* Agregado por diferencia al resultado esperado */
+    }
 
-a {text-decoration: none;}
-a:visited {color: black;}
+    h3, h4 {color: #666;}           /* Agregado para se parezca a la imagen de lo esperado */
 
-ul {list-style-type: none;}
+    p {
+        font-size: 12px;    /* Pedido */
+    }
 
-img {width: 100%;}
+    a { text-decoration: none; }              /* Agregado por diferencia al resultado esperado */
+    a:visited { color: black; }               /* Agregado por diferencia al resultado esperado */
 
-/*  */
+    ul { list-style-type: none; }             /* Agregado por diferencia al resultado esperado */
 
-header {background-color: #EAC926;}
+    img { width: 100%; }                      /* Agregado por diferencia al resultado esperado */
 
-h3 {
-    margin-top: 0;
-    font-size: 24px;
-    background-color: #ebebeb;
-}
+    .precio { font-size: 18px; }                 /* Pedido */
 
-h3, h4 {color: #666;}
+    .descuento, p.descripcion { font-size: 16px; }    /* Pedido */
 
-p {
-    font-size: 12px;
-}
+    .descripcion { color: #666; }
 
-p.precio {font-size: 18px;}
+    .descuento, .green {color: #39b54a;}   /* Agregado por diferencia al resultado esperado */
 
-p.descuento, p.descripcion {font: 16px;}
+    .blue { color: #1259c3; }                 /* Agregado por diferencia al resultado esperado */
+    .black { color: black; }                  /* Agregado por diferencia al resultado esperado */
 
-p.descuento, .green {color: #39b54a;}
+    .btn {
+        text-align: center;             /* Pedido */
+        padding: 10px;                  /* Pedido */
+        border: none;                   /* Agregado por diferencia al resultado esperado - ya que elegí button  */
+        border-radius: 5px;             /* Pedido */
+        margin: 20px 0;                 /* Pedido */
+        cursor: pointer;                /* Pedido */
+        color: white;                   /* Pedido */
+        background-color: #0044AA;      /* Pedido */
+    }
 
-.blue {color: #1259c3;}
+/* ---------------- Fin estilos generales */
 
-.password-container {
-    margin-top: 20px;
-}
+/* ---------------- Por seccion > elementos  */
+    /* --- Header */
+        header { background-color: #EAC926; }     /* Agregado por diferencia al resultado esperado */
 
-button[type="submit"] {
-    margin-top: 20px;
-}
+        header a img.logo { width: 50%; }       /* Pedido */
 
-footer {
-    margin-top: 20px;
-}
+        header input { width: 50%; }            /* Pedido */
+        header input { display: block; }        /* Agregado por diferencia al resultado esperado */
+
+        header nav { display: none; }           /* Pedido */
+
+        header div.menu-button-content { text-align: center; }  /* Pedido */
+
+        header div button.menu-button {
+            width: 40px;                    /* Pedido */
+            height: 40px;                   /* Pedido */
+            font-size: 20px;                /* Pedido */
+        }
+
+        header div button.menu-button:hover { background-color: #0022AA; }  /* Pedido */
+
+    /* --- Fin - Header */ 
+
+    /* --- Banner */ 
+
+        section.banner-content img {
+            display: block;                 /* Pedido */
+            width: 100%;                    /* Pedido */
+        }
+
+    /* --- Fin - Banner */ 
+
+    /* --- Main */
+
+        /* Home */
+            main section article {
+                margin: 10px auto;              /* Pedido */
+                background-color: white;      /* Agregado para se parezca a la imagen de lo esperado */
+                padding: 15px;                  /* Pedido */
+                width: 90%;                     /* Agregado para se parezca a la imagen de lo esperado */
+            }
+            main section article:nth-child(2) { margin-top: 0; }     /* Pedido */
+            main section article:last-child { margin-bottom: 0; }   /* Pedido */
+
+            main section h3 {   
+                font-size: 24px;                /* Pedido */
+                margin: 20px auto;              /* Pedido */
+                width: 90%;                     /* Pedido */
+            }
+
+            main section article footer { background-color: white; }    /* Agregado para se parezca a la imagen de lo esperado */ 
+        /* fin - Home */
+
+        /* Login y Register */ 
+
+            main form { padding: 0 5%; }
+
+            main form input {
+                width: 100%;            /* Pedido */
+                padding: 10px;          /* Pedido */
+                margin: 20px 0;         /* Pedido */
+                border: none;           /* Pedido - aúnque pidieron borde 0 */
+                border-radius: 5px;     /* Pedido */
+            }
+
+            main form button {
+                color: white;                                       /* Pedido */
+                background-color: #0044AA;                          /* Pedido */
+                width: 100%;                                            /* Agregado para se parezca a la imagen de lo esperado */
+            }
+            main form button:hover { background-color: #0022AA; }     /* Pedido */
+
+            /* Register */ 
+                main form button[type='Reset']:hover {
+                    background-color: #CC1155;                          /* Pedido */
+                }
+
+                main form button[type='Reset'] {
+                    background-color: #CC1155;                          /* Agregado para se parezca a la imagen de lo esperado */
+                }
+            /* Fin - Register */ 
+
+        /* Fin - Login y Register */ 
+
+        
+
+    /* --- Fin - Main */
+
+    /* --- Footer */
+        body > footer {
+            padding: 20px 5%;                   /* Pedido */
+            background-color: white;            /* Agregado por diferencia al resultado esperado */
+            margin-top: 10px;                   /* Agregado por diferencia al resultado esperado */
+        }
+
+        body > footer article {
+            margin-bottom: 20px;                /* Pedido */
+        }
+
+        body > footer article:last-child {
+            margin-bottom: 0;                   /* Pedido */
+        }
+    /* --- Fin - Footer */
+
+/* ---------------- Fin - Por seccion > elementos  */
+
+/* ---------------- Media Querys  */
+
+    /* Media Querys */
+
+/* ---------------- Fin - Media Querys  */
