@@ -44,9 +44,7 @@ tus pares o compañer@s de mayor seniority.
 
     h3, h4 {color: #666;}           /* Agregado para se parezca a la imagen de lo esperado */
 
-    p {
-        font-size: 12px;    /* Pedido */
-    }
+    p { font-size: 12px; }   /* Pedido */ 
 
     a { text-decoration: none; }              /* Agregado por diferencia al resultado esperado */
     a:visited { color: black; }               /* Agregado por diferencia al resultado esperado */
@@ -55,14 +53,15 @@ tus pares o compañer@s de mayor seniority.
 
     img { width: 100%; }                      /* Agregado por diferencia al resultado esperado */
 
-    .precio { font-size: 18px; }                 /* Pedido */
+    .half { width: 50%; }
 
-    .descuento, p.descripcion { font-size: 16px; }    /* Pedido */
+    .flex { display: flex;}
+    .wrap { flex-wrap: wrap; }
+    .no-wrap { flex-wrap: nowrap; }
+    .align-center { align-items: center; }
 
-    .descripcion { color: #666; }
-
-    .descuento, .green {color: #39b54a;}   /* Agregado por diferencia al resultado esperado */
-
+    .c-666 { color: #666; }
+    .green {color: #39b54a;}   /* Agregado por diferencia al resultado esperado */
     .blue { color: #1259c3; }                 /* Agregado por diferencia al resultado esperado */
     .black { color: black; }                  /* Agregado por diferencia al resultado esperado */
 
@@ -83,10 +82,24 @@ tus pares o compañer@s de mayor seniority.
     /* --- Header */
         header { background-color: #EAC926; }     /* Agregado por diferencia al resultado esperado */
 
-        header a img.logo { width: 50%; }       /* Pedido */
+        header div.container {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-        header input { width: 50%; }            /* Pedido */
-        header input { display: block; }        /* Agregado por diferencia al resultado esperado */
+        header div.container div.half {
+            width: 50%;
+        }
+        
+        /* Pedido */
+        /* header a img.logo { width: 50%; }        */
+
+        /* Pedido */
+        /* header input { width: 50%; }             */
+        header input { 
+            display: block; 
+            width: 90%;
+        }        /* Agregado por diferencia al resultado esperado */
 
         header nav { display: none; }           /* Pedido */
 
@@ -114,6 +127,11 @@ tus pares o compañer@s de mayor seniority.
     /* --- Main */
 
         /* Home */
+            main > section {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
             main section article {
                 margin: 10px auto;              /* Pedido */
                 background-color: white;      /* Agregado para se parezca a la imagen de lo esperado */
@@ -123,13 +141,50 @@ tus pares o compañer@s de mayor seniority.
             main section article:nth-child(2) { margin-top: 0; }     /* Pedido */
             main section article:last-child { margin-bottom: 0; }   /* Pedido */
 
-            main section h3 {   
+            main h3 {   
                 font-size: 24px;                /* Pedido */
                 margin: 20px auto;              /* Pedido */
                 width: 90%;                     /* Pedido */
             }
 
-            main section article footer { background-color: white; }    /* Agregado para se parezca a la imagen de lo esperado */ 
+            main section article footer { 
+                border-top: 1px solid #ebebeb;  /* Pedido */
+                padding-top: .5rem;
+                position: relative;
+                background-color: white;        /* Agregado para se parezca a la imagen de lo esperado */ 
+            }
+
+            main section article footer i {         /* Pedido */
+                position: absolute;
+                right: 0px;
+                top: -15px;
+                padding: 4px 4px 6px 6px;
+                border: 1px solid green;
+                border-radius: 50%;
+            }
+
+            main section article footer > div {
+                padding: .5rem 0;
+            }
+
+            main section article footer span.precio {
+                width: 30%;
+            }
+            main section article footer span.descuento {
+                width: 70%;
+            }
+
+            main section article footer > p {
+                padding: 12px;
+            }
+
+            .descuento, 
+            p.descripcion { font-size: 16px; }    /* Pedido */
+
+            .precio { 
+                font-size: 18px;        /* Pedido */
+            }                 
+
         /* fin - Home */
 
         /* Login y Register */ 
@@ -137,11 +192,25 @@ tus pares o compañer@s de mayor seniority.
             main form { padding: 0 5%; }
 
             main form input {
-                width: 100%;            /* Pedido */
                 padding: 10px;          /* Pedido */
                 margin: 20px 0;         /* Pedido */
                 border: none;           /* Pedido - aúnque pidieron borde 0 */
                 border-radius: 5px;     /* Pedido */
+            }
+
+            main form input[type='text'],
+            main form input[type='email'],
+            main form input[type='date'],
+            main form input[type='password'],
+            main form input[type='file'] {
+                width: 100%;
+            }
+
+            main form div.intereses-container div.checkbox {
+                width: 100%;
+            }
+            main form div.intereses-container div.checkbox > * {
+                margin-left: 5%;
             }
 
             main form button {
@@ -152,6 +221,9 @@ tus pares o compañer@s de mayor seniority.
             main form button:hover { background-color: #0022AA; }     /* Pedido */
 
             /* Register */ 
+
+
+
                 main form button[type='Reset']:hover {
                     background-color: #CC1155;                          /* Pedido */
                 }

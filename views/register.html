@@ -12,10 +12,17 @@
 
 <body>
     <header>
-        <a href="/">
-            <img class="logo" src="/img/logo-mercado-libre.svg" alt="Logo Mercado Libre">
-        </a>
-        <input type="text" name="busqueda" id="busqueda" placeholder="Buscar productos, marcas">
+        <div class="container">
+            <div class="half">
+                <a href="/">
+                    <img class="logo" src="/img/logo-mercado-libre.svg" alt="Logo Mercado Libre">
+                </a>
+            </div>
+            <div class="half">
+                <input type="text" name="busqueda" id="busqueda" placeholder="Buscar productos, marcas">
+                <i class='fas fa-search'></i>
+            </div>
+        </div>
         <p><i class='fas fa-hand-holding-usd'></i>Comprá en cuotas y sin tarjeta de crédito</p>
         <nav>
             <section>
@@ -61,26 +68,46 @@
             <input type="text" name="address" id="address" placeholder="Domicilio">
 
             <h4 class="black">Perfil de usuario</h4>
-            <input type="radio" name="userType" id="comprador" value="comprador">
-            <label for="comprador">Comprador</label>
-            <input type="radio" name="userType" id="vendedor" value="vendedor">
-            <label for="vendedor">Vendedor</label>
+            <div class="flex no-wrap">
+                <div class="flex no-wrap align-center half">
+                    <input type="radio" name="userType" id="comprador" value="comprador">
+                    <label for="comprador">Comprador</label>
+                </div>
+                <div class="flex no-wrap align-center half">
+                    <input type="radio" name="userType" id="vendedor" value="vendedor">
+                    <label for="vendedor">Vendedor</label>
+                </div>
+            </div>
 
             <h4 class="black">Intereses</h4>
-            <input type="checkbox" name="intereses" id="electro">
-            <label for="electro">Electro</label>
+            <div class="intereses-container">
 
-            <input type="checkbox" name="intereses" id="moda">
-            <label for="moda">Moda</label>
+                <div class="checkbox">
+                    <input type="checkbox" name="intereses" id="electro">
+                    <label for="electro">Electro</label>
+                </div>
+    
+                <div class="checkbox">
+                    <input type="checkbox" name="intereses" id="moda">
+                    <label for="moda">Moda</label>
+                </div>
 
-            <input type="checkbox" name="intereses" id="hogar">
-            <label for="hogar">Hogar</label>
+                <div class="checkbox">
+                    <input type="checkbox" name="intereses" id="hogar">
+                    <label for="hogar">Hogar</label>
+                </div>
 
-            <input type="checkbox" name="intereses" id="jugueteria">
-            <label for="jugueteria">juguetería</label>
+                <div class="checkbox">
+                    <input type="checkbox" name="intereses" id="jugueteria">
+                    <label for="jugueteria">juguetería</label>
+                </div>
 
-            <input type="checkbox" name="intereses" id="vida-sana">
-            <label for="vida-sana">Vida sana</label>
+                <div class="checkbox">
+                    <input type="checkbox" name="intereses" id="vida-sana">
+                    <label for="vida-sana">Vida sana</label>
+                </div>
+
+            </div>
 
             <h4 class="black">Elegí tu foto de usuario</h4>
             <input type="file" name="userPhoto" id="userPhoto">
