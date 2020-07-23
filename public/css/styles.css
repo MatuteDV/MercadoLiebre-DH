@@ -82,26 +82,69 @@ tus pares o compañer@s de mayor seniority.
     /* --- Header */
         header { background-color: #EAC926; }     /* Agregado por diferencia al resultado esperado */
 
-        header div.container {
+        header div.header-content {
+            padding: 6%;
+        }
+
+        header div.header-content div.logo-container a img {
+            width: 90%;
+        }
+
+        header div.header-content div.container {
             display: flex;
             flex-wrap: wrap;
         }
 
-        header div.container div.half {
-            width: 50%;
-        }
-        
         /* Pedido */
         /* header a img.logo { width: 50%; }        */
 
         /* Pedido */
         /* header input { width: 50%; }             */
-        header input { 
-            display: block; 
-            width: 90%;
-        }        /* Agregado por diferencia al resultado esperado */
 
-        header nav { display: none; }           /* Pedido */
+        header div.search-container {
+            position: relative;
+        }
+
+        header div.search-container input { 
+            padding: 10px;         
+            border: none;           
+            border-radius: 5px;    
+            display: block; 
+            width: 100%;
+        }
+
+        header div.search-container i {
+            font-size: 14px;
+            position: absolute;
+            right: 1%;
+            top: 16%;
+            padding: 5px;
+            background-color: white;
+            color: #666;
+        }
+
+        header div.header-content > p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        header nav { display: none; }       /* Pedido */
+
+            .menu-left, .menu-right {
+                width: 50%;
+            }
+
+            .menu {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+            }
+                .menu a { 
+                    margin-left: 1rem; 
+                    font-size: .8rem;
+                }
+            .menu-right-content { justify-content: flex-end; }
 
         header div.menu-button-content { text-align: center; }  /* Pedido */
 
@@ -109,6 +152,7 @@ tus pares o compañer@s de mayor seniority.
             width: 40px;                    /* Pedido */
             height: 40px;                   /* Pedido */
             font-size: 20px;                /* Pedido */
+            margin-bottom: 0;
         }
 
         header div button.menu-button:hover { background-color: #0022AA; }  /* Pedido */
@@ -133,18 +177,29 @@ tus pares o compañer@s de mayor seniority.
             }
 
             main section article {
-                margin: 10px auto;              /* Pedido */
+                margin: 10px 2rem;              /* Pedido */
                 background-color: white;      /* Agregado para se parezca a la imagen de lo esperado */
                 padding: 15px;                  /* Pedido */
-                width: 90%;                     /* Agregado para se parezca a la imagen de lo esperado */
+                width: 100%;
             }
             main section article:nth-child(2) { margin-top: 0; }     /* Pedido */
             main section article:last-child { margin-bottom: 0; }   /* Pedido */
 
+            main section article:hover {
+                box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+            }
+
+                .fa-truck {
+                    transition: transform 1s;
+                }
+                main section article:hover .fa-truck {
+                    transform: rotateZ(-90deg);
+                }
+
             main h3 {   
                 font-size: 24px;                /* Pedido */
-                margin: 20px auto;              /* Pedido */
-                width: 90%;                     /* Pedido */
+                margin: 20px 2rem;              /* Pedido */
+                width: 100%;                     /* Pedido */
             }
 
             main section article footer { 
@@ -153,12 +208,22 @@ tus pares o compañer@s de mayor seniority.
                 position: relative;
                 background-color: white;        /* Agregado para se parezca a la imagen de lo esperado */ 
             }
+            
+            main section article footer div.description-content {
+                padding-top: .5rem;
+                display: none;
+                /* transition: all 500ms; */
+            }
+
+            main section article:hover footer div.description-content {
+                display: block;
+            }
 
             main section article footer i {         /* Pedido */
                 position: absolute;
                 right: 0px;
                 top: -15px;
-                padding: 4px 4px 6px 6px;
+                padding: 6px 4px;
                 border: 1px solid green;
                 border-radius: 50%;
             }
@@ -241,13 +306,26 @@ tus pares o compañer@s de mayor seniority.
 
     /* --- Footer */
         body > footer {
-            padding: 20px 5%;                   /* Pedido */
-            background-color: white;            /* Agregado por diferencia al resultado esperado */
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2rem 5%;                   /* Pedido */
             margin-top: 10px;                   /* Agregado por diferencia al resultado esperado */
+            background-color: white;            /* Agregado por diferencia al resultado esperado */
         }
 
         body > footer article {
+            padding-top: 2rem;
+            width: 80%;
+            margin: 0 auto;
             margin-bottom: 20px;                /* Pedido */
+            text-align: center;                /* Pedido */
+        }
+
+        body > footer article i {
+            font-size: 2em;
+            margin-bottom: 10px;
         }
 
         body > footer article:last-child {
@@ -260,5 +338,75 @@ tus pares o compañer@s de mayor seniority.
 /* ---------------- Media Querys  */
 
     /* Media Querys */
+
+    @media only screen and ( min-width: 768px ) {
+
+        header div.header-content {
+            padding: 1.5rem 2rem 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+            header div.header-content div.container { 
+                width: 64%; 
+                align-items: center;
+            }
+                .logo-container { width: 30%; }
+                .search-container { width: 70%; }
+                header div.header-content > p { 
+                    width: 34%; 
+                    margin-top: 0;
+                }
+        
+        header nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 2.5rem;
+        }
+
+        .menu-button-content { 
+            display: none;
+        }
+
+        main h3 {
+            margin: 10px 1rem;
+        }
+
+        main section {
+            padding: 0 4%;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+
+        main section article {
+            width: 45%;
+            margin: 10px 1rem;
+
+        }
+    }
+
+    @media only screen and ( min-width: 1024px ) {
+        header div.header-content { padding: .5rem 2rem 1rem; }
+
+        main section {
+            margin-bottom: 15%;
+        }
+
+        main section article {
+            width: 22%;
+        }
+        
+        body > footer {
+            flex-direction: row;
+        }
+
+        body > footer article {
+            width: 33%;
+        }
+    }
 
 /* ---------------- Fin - Media Querys  */
